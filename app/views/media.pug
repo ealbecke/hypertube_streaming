@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	div(class='container-fluid')
+		div(class='row justify-content-center mt-3')
+			div(class='col-lg-8' id='movieTitle')
+				h2
+				hr
+		div(class='row justify-content-center movie-container mt-3')
+			div(class='col-lg-8')
+				div(class='movie-player')
+					video(poster='', controls, crossorigin)
+						source(type='video/mp4')
+						track(kind='captions', label='English captions', src='', srclang='en', default)
+				hr
+		div(class='row justify-content-center movie-container mt-3'	)
+			div(class='col-lg-8')
+				div(id='accordion', role='tablist', aria-multiselectable='true')
+					div(class='card')
+						div(class='card-header', role='tab', id='headingOne')
+							h5(class='mb-0')
+								a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne') Streams
+						div(id='collapseOne', class='collapse show', role='tabpanel', aria-labelledby='headingOne')
+							div(class='card-block')
+								ul(class='list-group list-group-flush', id='streams')
+				hr
+		div(class='row justify-content-center movie-container mt-3')
+			div(class='col-lg-8')
+				div(class='row')
+					div(class='hidden-sm-down col-md-3')
+						img(class='img-fluid img-thumbnail', id='moviePicture')
+					div(class='col-md-9')
+						div(class='card mb-3')
+							ul(class='list-group list-group-flush')
+								li(class='list-group-item d-block') <h5 id='synopsis'>Synopsis</h5>
+								li(class='list-group-item d-block') <h5 id='director'>Director</h5>
+								li(class='list-group-item d-block') <h5 id='starring'>Starring</h5> 
+								li(class='list-group-item d-block') <h5 id='releaseDate'>Release Date</h5> 
+								li(class='list-group-item d-block') <h5 id='genres'>Genre</h5> 
+								li(class='list-group-item d-block') <h5 id='runningTime'1>Running time</h5>
+				hr
+		div(class='row justify-content-center movie-container mt-3')
+			div(class='col-lg-8')
+				div(class='card mb-3')
+					h4(class='card-header comments-title') Reviews
+					ul(class='list-group list-group-flush list-unstyled' id="movieComments")
+						li(class='list-group-item media formcomment')
+							div(class='media-body')
+								input(type='text', name='comment', class='form-control form-control-lg', placeholder='Write a comment..', id='commentCntn')
+							button(type='button', class='btn btn-outline-primary btn-lg ml-4', id='sendButtonMessage') Send

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	div(class='container-fluid')
+		div(class='row justify-content-center mt-3')
+			div(class='col-sm-12 col-md-8')
+				div(class='row justify-content-center mt-3')
+					div(class='hidden-sm-down col-md-3')
+						img(class='img-fluid img-thumbnail', id='profilePicture', src='/images/profiles/' + user.Username + user.UserID + '.png')
+					div(class='col-sm-12 col-md-9')
+						h2= user.Username
+						hr
+						div(class='card')
+							ul(class='list-group list-group-flush')
+								li(class='list-group-item d-block') 
+									h5 Name 
+									span(id='profileUsername')= user.Firstname + ' ' + user.Lastname
+								li(class='list-group-item d-block') 
+									h5 Member since
+									span(id='profileMemberSince')= user.CreationDate
+								li(class='list-group-item d-block') 
+									h5 Number of comments
+									span(id='profileNumberComments')= user.CommentsNumber
+								li(class='list-group-item d-block')
+									h5 Movie Watched
+									span(id='profileNumberWatchedMovie')= user.MoviesSeenNumber
+		

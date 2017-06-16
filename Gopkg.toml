@@ -1,0 +1,48 @@
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/anacrolix/torrent"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/auth0/go-jwt-middleware"
+
+[[dependencies]]
+  name = "github.com/dgrijalva/jwt-go"
+  version = "^3.0.0"
+
+[[dependencies]]
+  name = "github.com/go-ozzo/ozzo-validation"
+  version = "^3.1.0"
+
+[[dependencies]]
+  name = "github.com/go-sql-driver/mysql"
+  version = "^1.3.0"
+
+[[dependencies]]
+  name = "github.com/gorilla/sessions"
+  version = "^1.1.0"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/nfnt/resize"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/odwrtw/eztv"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/oz/osdb"
+
+[[dependencies]]
+  name = "github.com/rs/cors"
+  version = "^1.0.0"
+
+[[dependencies]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+
+[[dependencies]]
+  branch = "master"
+  name = "golang.org/x/oauth2"

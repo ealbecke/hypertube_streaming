@@ -1,0 +1,97 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 80px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+	padding: 60px 15px 0;
+}
+
+.footer > .container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+code {
+	font-size: 80%;
+}
+
+#inputSearch {
+	border-radius: .3rem .3rem 0 0;
+}
+#inputSearchOptions {
+	border-radius: 0 0 .3rem .3rem;
+	border-left: 1px solid rgba(0,0,0,.15);
+	border-right: 1px solid rgba(0,0,0,.15);
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.movie-player img {
+	width: 100%;
+}
+h4.comments-title {
+	border-bottom: none;
+}
+
+.navbar-nav #profileLink, 
+.navbar-nav #logoutLink, 
+.navbar-nav #loginLink, 
+.navbar-nav #signUpLink {
+	display: none;
+}
+
+.list-group-item {
+	word-break: break-word;
+}
+
+
+.movie-player {
+	position: relative;
+}
+
+#overlay {
+	cursor: not-allowed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	opacity: 0.3;
+	filter: alpha(opacity=80);
+	z-index: 50;
+}
+
+#loading
+{
+	cursor: not-allowed;
+	left : 50%;
+	top : 50%;
+	position : absolute;
+	z-index : 101;
+	width : 200px;
+	height : 200px;
+	margin-left : -100px;
+	margin-top : -100px;
+}

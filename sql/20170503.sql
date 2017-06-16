@@ -1,0 +1,6 @@
+ALTER TABLE comments ADD username VARCHAR(255) NOT NULL;
+
+ALTER TABLE comments MODIFY COLUMN username VARCHAR(255) NOT NULL AFTER user_id;
+
+ALTER TABLE torrents ADD torrent_name VARCHAR(255) NOT NULL;
+ALTER TABLE torrents MODIFY COLUMN torrent_name VARCHAR(255) NOT NULL AFTER hash;

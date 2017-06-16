@@ -1,0 +1,11 @@
+// Tether first, then Bootstrap JS.
+script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js')
+
+script(src='/javascripts/global.js')
+
+if (page)
+	script(src='/javascripts/' + page + '.js')
+
+if (page == 'media')
+	script(src='/javascripts/plyr.js')

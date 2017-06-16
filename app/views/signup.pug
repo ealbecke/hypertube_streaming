@@ -1,0 +1,43 @@
+extends layout
+
+block content
+	div(class='container-fluid')
+		div(class='row justify-content-center mt-3')
+			div(class='col-md-5')
+				h2 Sign Up
+				hr
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				form(id='signupForm')
+					div(class='form-group')
+						label(for='inputSignUpEmail') Email address
+						input(type='text', name='email', class='form-control', aria-describedby="emailHelp", id='inputSignUpEmail')
+						small(id='emailHelp', class='form-text text-muted') We'll never share your email with anyone else.
+					div(class='form-group')
+						label(for='inputSignUpUsername') Username
+						input(type='text', name='username', class='form-control', id='inputSignUpUsername')
+					div(class='form-group')
+						label(for='inputSignUpProfilePicture') Profile picture
+						input(type='file', name='profilePicture', class='form-control-file', id='inputSignUpProfilePicture', accept='image/jpeg, image/jpg, image/png')
+					div(class='form-group')
+						label(for='inputSignUpFirstname') First name
+						input(type='text', name='firstname', class='form-control', id='inputSignUpFirstname')
+					div(class='form-group')
+						label(for='inputSignUpLastname') Last name
+						input(type='text', name='lastname', class='form-control', id='inputSignUpLastname')
+					div(class='form-group')
+						label(for='inputSignUpPassword') Password
+						input(type='password', name='password', class='form-control', id='inputSignUpPassword')
+					div(class='form-group')
+						label(for='inputSignUpConfirmPassword') Confirm password
+						input(type='password', name='confirmPassword',class='form-control', id='inputSignUpConfirmPassword')
+					button(type='submit', class="btn btn-info btn-block") Sign Up
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				hr
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				button(type='button', class='btn btn-outline-primary btn-block', id='inputLogInGoogle') Log In with Google
+		div(class='row justify-content-center mt-3')
+			div(class='col-md-5')
+				button(type='button', class='btn btn-secondary btn-block', id='inputLogIn42') Log In with 42

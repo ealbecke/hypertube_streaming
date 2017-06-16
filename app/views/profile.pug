@@ -1,0 +1,76 @@
+extends layout
+
+block content
+	div(class='container-fluid')
+		div(class='row justify-content-center mt-3')
+			div(class='col-sm-12 col-md-8')
+				div(class='row justify-content-center mt-3')
+					div(class='hidden-sm-down col-md-3')
+						img(class='img-fluid img-thumbnail', id='profilePicture')
+					div(class='col-sm-12 col-md-9')
+						ul(class='nav nav-tabs mb-3', role='tablist')
+							li(class='nav-item')
+								a(class='nav-link active', data-toggle='tab', href='#profile', role='tab') Profile
+							li(class='nav-item')
+								a(class='nav-link', data-toggle='tab', href='#edit', role='tab') Edit
+						div(class='tab-content')
+							div(class='tab-pane active', id='profile', role='tabpanel')
+								h2
+								hr
+								div(class='card')
+									ul(class='list-group list-group-flush')
+										li(class='list-group-item d-block') 
+											h5 Name 
+											span(id='profileUsername')
+										li(class='list-group-item d-block') 
+											h5 Member since
+											span(id='profileMemberSince')
+										li(class='list-group-item d-block') 
+											h5 Number of comments
+											span(id='profileNumberComments')
+										li(class='list-group-item d-block')
+											h5 Movie Watched
+											span(id='profileNumberWatchedMovie')
+							div(class='tab-pane', id='edit', role='tabpanel')
+								form(id='updateProfileForm')
+									div(class='card')
+										ul(class='list-group list-group-flush')
+											li(class='list-group-item d-block')
+												label(for='inputUpdateUsername') 
+													h5 Username
+												input(type='text', class='form-control', id='inputUpdateUsername', name='username', disabled)
+											li(class='list-group-item d-block')
+												label(for='inputUpdateFirstname')
+													h5 First name
+												input(type='text', class='form-control', id='inputUpdateFirstname', name='firstname')
+											li(class='list-group-item d-block')
+												label(for='inputUpdateLastname')
+													h5 Last name
+												input(type='text', class='form-control', id='inputUpdateLastname', name='lastname')
+											li(class='list-group-item d-block')
+												label(for='inputUpdateEmail')
+													h5 Email address
+												input(type='text', class='form-control', id='inputUpdateEmail', name='email')
+											li(class='list-group-item d-block')
+												label(for='inputUpdateLanguage')
+													h5 Language
+												select(class='form-control', id='inputUpdateLanguage', name='language')
+													option(value='1' selected) English
+													option(value='2') French
+											li(class='list-group-item d-block')
+												label(for='inputUpdateProfilePicture')
+													h5 Profile picture
+												input(type='file', class='form-control-file', id='inputUpdateProfilePicture', name='profilePicture', accept="image/jpeg, image/jpg, image/png")
+											li(class='list-group-item d-block')
+												label(for='inputUpdateOldPassword')
+													h5 Old password
+												input(type='password', class='form-control', id='inputUpdateOldPassword', name='oldPassword')
+											li(class='list-group-item d-block')
+												label(for='inputUpdateNewPassword')
+													h5 New password
+												input(type='password', class='form-control', id='inputUpdateNewPassword', name='newPassword')
+											li(class='list-group-item d-block') 
+												label(for='inputUpdateConfirmNewPassword')
+													h5 Confirm new password
+												input(type='password', class='form-control', id='inputUpdateConfirmNewPassword', name='confirmNewPassword')
+									button(type='submit', class='btn btn-outline-success btn-block mt-3') Save

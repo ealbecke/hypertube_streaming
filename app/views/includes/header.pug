@@ -1,0 +1,26 @@
+nav(class='navbar navbar-toggleable-md navbar-light bg-faded')
+	button(class='navbar-toggler navbar-toggler-right', type='button', data-toggle='collapse', data-target='#navbarToggler', aria-controls='navbarToggler', aria-expanded='false', aria-label='Toggle navigation')
+		span(class='navbar-toggler-icon')
+	a(class='navbar-brand', href='/') Hypertube
+	div(class='collapse navbar-collapse justify-content-end', id='navbarToggler')
+		ul(class='navbar-nav')
+			if (page == 'signup')
+				li(class='nav-item active', id='signUpLink') 
+					a(class='nav-link', href='/signup') Sign Up
+			else
+				li(class='nav-item', id='signUpLink') 
+					a(class='nav-link', href='/signup') Sign Up
+			if (page == 'login')
+				li(class='nav-item active', id='loginLink')
+					a(class='nav-link', href='/login') Log In
+			else
+				li(class='nav-item', id='loginLink')
+					a(class='nav-link', href='/login') Log In
+			if (page == 'profile')
+				li(class='nav-item active', id='profileLink')
+					a(class='nav-link', href='/profile', id='profileLinkContent')
+			else
+				li(class='nav-item', id='profileLink')
+					a(class='nav-link', href='/profile', id='profileLinkContent')
+			li(class='nav-item', id='logoutLink')
+				a(class='nav-link', href='/logout') Logout

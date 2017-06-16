@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	div(class='container-fluid')
+		div(class='row justify-content-center mt-3')
+			div(class='col-md-5')
+				h2 Forgot password?
+				hr
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				form(id='recoverForm')
+					div(class='form-group')
+						label(for='inputRecoverEmail') Email address
+						input(type='email', name='email', class='form-control', id='inputRecoverEmail')
+					button(type='submit', class='btn btn-primary btn-block') Recover
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				hr
+		div(class='row justify-content-center')
+			div(class='col-md-5')
+				p(class='text-muted') 
+					small If you're not getting any email, you might not have an account on our platform.
